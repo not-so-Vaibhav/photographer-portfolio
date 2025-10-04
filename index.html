@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav Bariyar - not_so_graphy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP Core CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger Plugin CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- MotionPathPlugin CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <!-- TextPlugin CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body data-theme="dark">
+    <div class="loader">
+        <div class="loading-text">Loading Your World...</div>
+        <div class="loadbar"><div class="loader-progress"></div></div>
+    </div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo path-anim">not_so_graphy</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="theme-toggle-icon moon">☾</span>
+                <span class="theme-toggle-icon sun">☀</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#gallery">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Vaibhav Bariyar</h1>
+            <h2 class="hero-subtitle text-anim">Capturing stories through the lens – not_so_graphy</h2>
+            <p class="hero-description">I believe photography is not just about pictures, it’s about freezing emotions, moments, and perspectives that words can’t describe.</p>
+            <a href="#gallery" class="cta-button">Explore Portfolio</a>
+        </div>
+        <img src="images/hero.jpg" alt="Hero Image" class="hero-image">
+    </section>
+    <section id="gallery" class="gallery">
+        <h2>Portfolio</h2>
+        <div class="gallery-container">
+            <div class="gallery-category">
+                <h3>Portraits</h3>
+                <div class="gallery-grid">
+                    <img src="images/portraits1.jpg" alt="Portrait 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/portraits2.jpg" alt="Portrait 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                </div>
+                <button class="explore-more">Explore More</button>
+            </div>
+            <div class="gallery-category">
+                <h3>Street Photography</h3>
+                <div class="gallery-grid">
+                    <img src="images/street1.jpg" alt="Street 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/street2.jpg" alt="Street 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                </div>
+                <button class="explore-more">Explore More</button>
+            </div>
+            <div class="gallery-category">
+                <h3>Festival & Cultural Moments</h3>
+                <div class="gallery-grid">
+                    <img src="images/festival1.jpg" alt="Festival 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/festival2.jpg" alt="Festival 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                </div>
+                <button class="explore-more">Explore More</button>
+            </div>
+            <div class="gallery-category">
+                <h3>Creative Shots</h3>
+                <div class="gallery-grid">
+                    <img src="images/creative1.jpg" alt="Creative 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/creative2.jpg" alt="Creative 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                </div>
+                <button class="explore-more">Explore More</button>
+            </div>
+            <div class="gallery-category">
+                <h3>Candid Photography</h3>
+                <div class="gallery-grid">
+                    <img src="images/candid1.jpg" alt="Candid 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/candid2.jpg" alt="Candid 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                </div>
+                <button class="explore-more">Explore More</button>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/vaibhav.png" alt="Vaibhav Bariyar" class="about-image anime-anim">
+            <div class="about-text">
+                <p>Hi, I’m Vaibhav Bariyar, the photographer behind not_so_graphy.</p>
+                <p>I started my journey with curiosity and a simple camera, and now photography has become my way of expressing creativity.</p>
+                <p>📍 Currently pursuing B.Tech CSE at MIT-ADT University, Pune.</p>
+                <p>🎉 Secured 2nd position in the Photography Competition at Persona Fest, MIT-ADT.</p>
+                <p>💡 I enjoy exploring portraits, candid moments, festivals, and street photography.</p>
+                <p>My goal is to capture images that tell stories — raw, aesthetic, and real.</p>
+            </div>
+        </div>
+    </section>
+    <section id="achievements" class="achievements">
+        <h2>Achievements</h2>
+        <div class="achievement-tabs">
+            <div class="achievement-tab">🥈 2nd Position – Persona Fest</div>
+            <div class="achievement-tab">📸 Event Coverage</div>
+            <div class="achievement-tab">🌟 Instagram Brand</div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Let’s connect!</p>
+        <p><a href="mailto:notsography@gmail.com"><img src="https://img.icons8.com/ios-filled/50/00d4ff/email.png" alt="Email" class="contact-icon"></a></p>
+        <p><a href="https://www.instagram.com/not_so_graphy" target="_blank"><img src="https://img.icons8.com/ios-filled/50/00d4ff/instagram-new.png" alt="Instagram" class="contact-icon"></a></p>
+        <p>🌍 Location: Pune, India</p>
+        <p>🕒 Last Updated: 12:12 PM IST on Saturday, October 04, 2025</p>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
