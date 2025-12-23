@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Bariyar - not_so_graphy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Vaibhav Bariyar - Professional photographer capturing stories through the lens. Specializing in portraits, street photography, festivals, and candid moments.">
+    <meta name="keywords" content="photography, photographer, portraits, street photography, Pune, not_so_graphy">
+    <meta name="author" content="Vaibhav Bariyar">
+    <meta property="og:title" content="Vaibhav Bariyar - not_so_graphy">
+    <meta property="og:description" content="Capturing stories through the lens – not_so_graphy">
+    <meta property="og:type" content="website">
+    <title>Vaibhav Bariyar - not_so_graphy | Professional Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="style.css">
-    <!-- GSAP Core CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- GSAP Core CDN - Deferred for performance -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <!-- ScrollTrigger Plugin CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <!-- MotionPathPlugin CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js" defer></script>
     <!-- TextPlugin CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js" defer></script>
 </head>
 <body data-theme="dark">
     <div class="loader">
-        <div class="loading-text">Loading Your World...</div>
+        <!-- <div class="loading-text">Loading Your World...</div> -->
         <div class="loadbar"><div class="loader-progress"></div></div>
     </div>
     <div class="cursor"></div>
@@ -56,57 +65,57 @@
             <p class="hero-description">I believe photography is not just about pictures, it’s about freezing emotions, moments, and perspectives that words can’t describe.</p>
             <a href="#gallery" class="cta-button">Explore Portfolio</a>
         </div>
-        <img src="images/hero.jpg" alt="Hero Image" class="hero-image">
+        <img src="images/hero.jpg" alt="Hero Image" class="hero-image" loading="eager" fetchpriority="high">
     </section>
     <section id="gallery" class="gallery">
         <h2>Portfolio</h2>
         <div class="gallery-container">
-            <div class="gallery-category">
+            <div class="gallery-category" data-category="portraits">
                 <h3>Portraits</h3>
                 <div class="gallery-grid">
-                    <img src="images/portraits1.JPG" alt="Portrait 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
-                    <img src="images/portraits2.jpg" alt="Portrait 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/portraits1.jpg" alt="Portrait 1" class="gallery-item" loading="lazy" width="400" height="400">
+                    <img src="images/portraits2.jpg" alt="Portrait 2" class="gallery-item" loading="lazy" width="400" height="400">
                 </div>
-                <button class="explore-more">Explore More</button>
+                <button class="explore-more" data-category="portraits">Explore More</button>
             </div>
-            <div class="gallery-category">
+            <div class="gallery-category" data-category="street">
                 <h3>Street Photography</h3>
                 <div class="gallery-grid">
-                    <img src="images/street1.jpg" alt="Street 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
-                    <img src="images/street2.jpg" alt="Street 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/street1.jpg" alt="Street 1" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
+                    <img src="images/street2.jpg" alt="Street 2" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
                 </div>
-                <button class="explore-more">Explore More</button>
+                <button class="explore-more" data-category="street">Explore More</button>
             </div>
-            <div class="gallery-category">
+            <div class="gallery-category" data-category="festival">
                 <h3>Festival & Cultural Moments</h3>
                 <div class="gallery-grid">
-                    <img src="images/festival1.jpg" alt="Festival 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
-                    <img src="images/festival2.jpg" alt="Festival 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/festival1.jpg" alt="Festival 1" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
+                    <img src="images/festival2.jpg" alt="Festival 2" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
                 </div>
-                <button class="explore-more">Explore More</button>
+                <button class="explore-more" data-category="festival">Explore More</button>
             </div>
-            <div class="gallery-category">
+            <div class="gallery-category" data-category="creative">
                 <h3>Creative Shots</h3>
                 <div class="gallery-grid">
-                    <img src="images/creative1.jpg" alt="Creative 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
-                    <img src="images/creative2.jpg" alt="Creative 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/creative1.jpg" alt="Creative 1" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
+                    <img src="images/creative2.jpg" alt="Creative 2" class="gallery-item" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
                 </div>
-                <button class="explore-more">Explore More</button>
+                <button class="explore-more" data-category="creative">Explore More</button>
             </div>
-            <div class="gallery-category">
+            <div class="gallery-category" data-category="candid">
                 <h3>Candid Photography</h3>
                 <div class="gallery-grid">
-                    <img src="images/candid1.jpg" alt="Candid 1" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
-                    <img src="images/candid2.jpg" alt="Candid 2" class="gallery-item" onerror="this.src='https://via.placeholder.com/250x250';">
+                    <img src="images/candid1.jpg" alt="Candid 1" class="gallery-item" loading="lazy" width="400" height="400">
+                    <img src="images/candid2.jpg" alt="Candid 2" class="gallery-item" loading="lazy" width="400" height="400">
                 </div>
-                <button class="explore-more">Explore More</button>
+                <button class="explore-more" data-category="candid">Explore More</button>
             </div>
         </div>
     </section>
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="images/vaibhav.png" alt="Vaibhav Bariyar" class="about-image anime-anim">
+            <img src="images/vaibhav.png" alt="Vaibhav Bariyar" class="about-image anime-anim" loading="lazy" width="250" height="250">
             <div class="about-text">
                 <p>Hi, I’m Vaibhav Bariyar, the photographer behind not_so_graphy.</p>
                 <p>I started my journey with curiosity and a simple camera, and now photography has become my way of expressing creativity.</p>
@@ -120,25 +129,83 @@
     <section id="achievements" class="achievements">
         <h2>Achievements</h2>
         <div class="achievement-tabs">
-            <div class="achievement-tab">🥈 2nd Position – Persona Fest</div>
-            <div class="achievement-tab">📸 Event Coverage</div>
-            <div class="achievement-tab">🌟 Instagram Brand</div>
+            <div class="achievement-tab">
+                <div class="achievement-icon">🥈</div>
+                <h4>2nd Position – Persona Fest (2025)</h4>
+                <p>Photography Competition at MIT-ADT. Recognized for creative vision and technical execution among collegiate photographers.</p>
+            </div>
+            <div class="achievement-tab">
+                <div class="achievement-icon">📸</div>
+                <h4>Event Coverage</h4>
+                <p>Documenting key moments and delivering professional, story-driven coverage.</p>
+            </div>
+            <div class="achievement-tab">
+                <div class="achievement-icon">⭐</div>
+                <h4>Instagram Brand @not_so_graphy</h4>
+                <p>Growing an engaged community with consistent content showcasing diverse photography styles.</p>
+            </div>
         </div>
     </section>
     <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Let’s connect!</p>
-        <p><a href="mailto:notsography@gmail.com"><img src="images/email.png" alt="Email" class="contact-icon"></a></p>
-        <p><a href="https://www.instagram.com/not_so_graphy" target="_blank"><img src="images/insta.png" alt="Instagram" class="contact-icon"></a></p>
+        <h2>Let's Connect</h2>
+        <div class="contact-info">
+            <a href="mailto:notsography@gmail.com" class="contact-info-item">
+                <img src="images/email.png" alt="Email" class="contact-icon">
+                <span>Email</span>
+            </a>
+            <a href="https://www.instagram.com/not_so_graphy" target="_blank" class="contact-info-item">
+                <img src="images/insta.png" alt="Instagram" class="contact-icon">
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.behance.net/notsography" target="_blank" class="contact-info-item" aria-label="Behance">
+                <span class="contact-icon contact-icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path d="M3.1 7.3h4.5c1.2 0 2.1.3 2.7.8.6.5.9 1.3.9 2.2 0 .8-.2 1.4-.6 1.9-.4.5-.9.8-1.5 1 1.6.3 2.4 1.2 2.4 2.9 0 1-.3 1.8-1 2.4-.7.6-1.6.9-2.8.9H3.1V7.3Zm3.9 5c.7 0 1.2-.1 1.6-.4.4-.3.6-.7.6-1.3 0-.5-.2-.9-.6-1.2-.4-.3-.9-.5-1.5-.5H4.9v3.4h2.1Zm.3 4.7c.7 0 1.2-.2 1.6-.5.4-.3.6-.8.6-1.4 0-.6-.2-1-.6-1.4-.4-.3-.9-.5-1.6-.5H4.9v3.8h2.4ZM14.5 12.9c0-.9.2-1.7.6-2.4.4-.7.9-1.2 1.6-1.6.7-.4 1.4-.6 2.3-.6 1.3 0 2.3.4 3.1 1.1.8.7 1.2 1.8 1.3 3.3H16c0 .8.3 1.4.8 1.8.5.4 1.1.6 1.9.6.5 0 1-.1 1.5-.3.5-.2.8-.4 1-.7l1.6.9c-.3.5-.8 1-1.6 1.4-.8.4-1.6.6-2.6.6-1 0-1.8-.2-2.5-.6-.7-.4-1.2-.9-1.6-1.6-.4-.7-.6-1.4-.6-2.3Zm7.1-1.1c-.1-.7-.4-1.2-.8-1.5-.4-.3-.9-.5-1.5-.5-.6 0-1.1.2-1.5.5-.4.3-.7.8-.8 1.5h4.6Z"/>
+                    </svg>
+                </span>
+                <span>Behance</span>
+            </a>
+            <a href="https://www.pinterest.com/notsography/" target="_blank" class="contact-info-item" aria-label="Pinterest">
+                <span class="contact-icon contact-icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path d="M12.2 3.2c-5.4 0-8.1 3.8-8.1 7.1 0 1.9.7 3.6 2.3 4.3.3.1.5 0 .6-.3l.2-1c.1-.3.1-.4-.2-.8-.5-.6-.8-1.5-.8-2.3 0-2.2 1.7-4.3 4.7-4.3 2.6 0 4.4 1.6 4.4 4 0 2.9-1.3 4.9-3.1 4.9-.9 0-1.6-.7-1.3-2 .3-1.2.8-2.6.8-3.5 0-.8-.4-1.5-1.3-1.5-1 0-1.8 1-1.8 2.3 0 .9.3 1.5.3 1.5s-1 4-.9 4.2c0 .1.1.1.1.1h.5c.2 0 1.2-.9 1.4-1.3l.5-1.9c.2.7 1 1.2 1.9 1.2 2.5 0 4.2-2.2 4.2-5.3 0-2.8-2.3-5.1-5.4-5.1Z"/>
+                    </svg>
+                </span>
+                <span>Pinterest</span>
+            </a>
+            <a href="https://stock.adobe.com/in/contributor/213083681/Notsography" target="_blank" class="contact-info-item" aria-label="Adobe Stock">
+                <span class="contact-icon contact-icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm2.4 13.4c.4.6 1.1 1 2 1 .9 0 1.5-.4 1.5-1.1 0-.6-.4-.9-1.4-1.3-.8-.3-1.3-.6-1.6-1-.3-.4-.5-.8-.5-1.4 0-1.4 1-2.4 2.7-2.4 1 0 1.8.3 2.3.8l-.6 1c-.4-.4-.9-.6-1.6-.6-.8 0-1.3.4-1.3 1s.4.9 1.4 1.2c.8.3 1.3.6 1.6 1s.5.8.5 1.4c0 1.5-1.1 2.5-2.8 2.5-1 0-1.9-.3-2.5-.9l.7-1.2Zm6.3-6.4h1.5v2.9h.1c.2-.3.4-.6.6-.9l1.7-2h1.8l-2.2 2.5 2.4 3.7h-1.7l-1.7-2.8-1 .9v1.9H12.7V10Z"/>
+                    </svg>
+                </span>
+                <span>Adobe Stock</span>
+            </a>
+        </div>
         <p>🌍 Location: Pune, India</p>
-        <p>🕒 Last Updated: 12:12 PM IST on Saturday, October 04, 2025</p>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send</button>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </section>
-    <script src="app.js"></script>
+    
+    <!-- Modal for Explore More -->
+    <div class="modal-overlay" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" title="Close">&times;</button>
+            <div class="modal-gallery" id="modalGallery"></div>
+        </div>
+    </div>
+    
+    <!-- Lightbox for full image view -->
+    <div class="modal-lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+    </div>
+    <script src="app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,87 @@
+{
+  "portraits": {
+    "display": [
+      "images/portraits1.jpg",
+      "images/portraits2.jpg"
+    ],
+    "additional": [
+      "images/portraits1.jpg",
+      "images/portraits2.jpg"
+    ]
+  },
+  "street": {
+    "display": [
+      "images/street1.jpg",
+      "images/street2.jpg"
+    ],
+    "additional": [
+      "images/street1.jpg",
+      "images/street2.jpg",
+      "images/street3.jpg",
+      "images/street4.jpg",
+      "images/street5.jpg",
+      "images/street6.jpg",
+      "images/street7.jpg",
+      "images/street8.jpg",
+      "images/street9.jpg",
+      "images/street10.jpg",
+      "images/street11.jpg"
+    ]
+  },
+  "festival": {
+    "display": [
+      "images/festival1.jpg",
+      "images/festival2.jpg"
+    ],
+    "additional": [
+      "images/1.jpg",
+      "images/festival1.jpg",
+      "images/festival2.jpg",
+      "images/festival3.jpg",
+      "images/festival4.jpg",
+      "images/festival6.jpg"
+
+    ]
+  },
+  "creative": {
+    "display": [
+      "images/creative1.jpg",
+      "images/creative2.jpg"
+    ],
+    "additional": [
+      "images/creative1.jpg",
+      "images/creative2.jpg",
+      "images/creative3.jpg",
+      "images/creative4.jpg",
+      "images/creative5.jpg",
+      "images/creative6.jpg",
+      "images/creative7.jpg",
+      "images/creative8.jpg",
+      "images/creative9.jpg",
+      "images/creative10.jpg",
+      "images/creative11.jpg",
+      "images/creative12.jpg",
+      "images/creative13.jpg",
+      "images/creative14.jpg",
+      "images/creative15.jpg",
+      "images/creative16.jpg",
+      "images/creative17.jpg"
+    ]
+  },
+  "candid": {
+    "display": [
+      "images/candid1.jpg",
+      "images/candid2.jpg"
+    ],
+    "additional": [
+      "images/candid1.jpg",
+      "images/candid2.jpg",
+      "images/candid3.jpg",
+      "images/candid4.jpg",
+      "images/candid7.jpg",
+      "images/candid9.jpg",
+      "images/candid10.jpg"
+    ]
+  }
+}
+
