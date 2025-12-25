@@ -5,23 +5,27 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
 
-// Middleware
+/* =======================
+   Middleware
+======================= */
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static frontend files
-app.use(express.static(path.join(__dirname)));
+/* =======================
+   Serve static frontend
+======================= */
+app.use(express.static(__dirname));
 
-// Serve photos.json
 app.get('/photos.json', (req, res) => {
   res.type('json');
   res.sendFile(path.join(__dirname, 'photos.json'));
 });
 
-// Email configuration (ENV ONLY)
+/* =======================
+   Nodemailer config
+======================= */
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -30,7 +34,9 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Contact form endpoint
+/* =======================
+   Contact form API
+======================= */
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -50,7 +56,7 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
-    const mailOptions = {
+    await transporter.sendMail({
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       replyTo: email,
@@ -61,12 +67,10 @@ app.post('/api/contact', async (req, res) => {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
-        <hr>
-        <p><small>Sent from photography portfolio website</small></p>
+        <hr />
+        <p><small>Sent from portfolio website</small></p>
       `
-    };
-
-    await transporter.sendMail(mailOptions);
+    });
 
     res.json({
       success: true,
@@ -82,19 +86,18 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-// SPA fallback
+/* =======================
+   SPA fallback
+======================= */
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start server (Render compatible)
+/* =======================
+   Start server (ONLY ONCE)
+======================= */
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
-console.log("SERVER FILE STARTED");
-console.log("About to listen on port:", PORT);
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-
